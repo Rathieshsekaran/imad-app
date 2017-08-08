@@ -52,13 +52,13 @@ function createtemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmltemplate=`
+var htmltemplate=
 <html>
     <head>
         <title>
             ${title}
-        </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
@@ -82,7 +82,7 @@ var htmltemplate=`
                 </div>
     </body>
 </html>
-`;
+;
 return htmltemplate;
 }
 
