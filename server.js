@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone={
+var articles= {
+    'article-one':{
     title:'Articleone |Rathieshsekaran',
     heading:'article one',
     date:'sept 15,1996',
@@ -18,7 +19,33 @@ var articleone={
             </p>
             <p>
                 Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                </p>`
+                </p>
+                
+},
+'article-two':{ title:'Articleone |Rathieshsekaran',
+    heading:'article two',
+    date:'sept 16,1996',
+    content:`
+            `<p>
+              Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
+                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
+           
+                
+                
+},
+'article-three':{title:'Articlethree |Rathieshsekaran',
+    heading:'article three',
+    date:'sept 17,1996',
+    content:`
+            <p>
+                
+             ` Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
+                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
+            </p>
+            <p>
+                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
+                </p>
+                }
 };
 function createtemplate(data){
     var title=data.title;
@@ -67,15 +94,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-    res.send(createtemplate(articleone));
+app.get('/:articlename',function(req,res){
+var articlename=req.params.articlename;
+    res.send(createtemplate(articles[articlename]));
 });
-app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article-two.html'));
-});
-app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname,'ui','article-three.html'));
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
