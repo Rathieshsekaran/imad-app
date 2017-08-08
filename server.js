@@ -7,63 +7,60 @@ app.use(morgan('combined'));
 
 
 var articles= {
-    'article-one':{
-    title:'Articleone |Rathieshsekaran',
-    heading:'article one',
-    date:'sept 15,1996',
-    content:`
-            <p>
-                
-              Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-            </p>
-            <p>
-                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                </p>
-                
-},
-'article-two':{ title:'Articleone |Rathieshsekaran',
-    heading:'article two',
-    date:'sept 16,1996',
-    content:`
-            `<p>
-              Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-           
-                
-                
-},
-'article-three':{title:'Articlethree |Rathieshsekaran',
-    heading:'article three',
-    date:'sept 17,1996',
-    content:`
-            <p>
-                
-             ` Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-            </p>
-            <p>
-                Robert Louis Stevenson spent his last five years in Samoa, where the locals couldn't comprehend how he earned his living as a writer... 
-                </p>
-                }
+    'article-one' : { 
+        title: 'articleone|rathiesh',
+        heading:'articleone',
+        date:'sept 15,1996',
+        content: `<p>
+               Study: Loss of Arctic sea ice impacting Atlantic Ocean water circulation system
+GEOLOGY AND GEOPHYSICS
+
+Arctic sea ice is not merely a passive responder to the climate changes occurring around the world, according to new research. 
+            </p>`
+    },
+    'article-two' : {
+        title: 'articletwo|rathiesh',
+        heading:'articltwo',
+        date:'sept 16,1996',
+        content: `<p>
+               Study: Loss of Arctic sea ice impacting Atlantic Ocean water circulation system
+GEOLOGY AND GEOPHYSICS
+
+Arctic sea ice is not merely a passive responder to the climate changes occurring around the world, according to new research. 
+            </p>`
+    },
+    'article-three' : {
+        title: 'articlethree|rathiesh',
+        heading:'articlthree',
+        date:'sept 17,1996',
+        content: `<p>
+               Study: Loss of Arctic sea ice impacting Atlantic Ocean water circulation system
+GEOLOGY AND GEOPHYSICS
+
+Arctic sea ice is not merely a passive responder to the climate changes occurring around the world, according to new research. 
+            </p>`
+    }
 };
-function createtemplate(data){
-    var title=data.title;
-    var date=data.date;
-    var heading=data.heading;
-    var content=data.content;
-var htmltemplate=
+
+function createtemplate (data) {
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+var htmltemplate=`
+
 <html>
     <head>
         <title>
             ${title}
-    </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
+
     <body>
-        <div class="container">
-                <div>
+        <div>
             <a href="/">HOME</a>
         </div>
         <hr/>
@@ -74,15 +71,11 @@ var htmltemplate=
             ${date}
         </div>
         <div>
-            <p>
-                This the content of the third article
-            </p>
             ${content}
         </div>
-                </div>
     </body>
 </html>
-;
+`;
 return htmltemplate;
 }
 
