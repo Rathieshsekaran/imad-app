@@ -1,5 +1,6 @@
 
 var button = document.getElementById('counter');
+var counter=0;
 button.onclick = function(){
 //create a request 
 //var request = new XMLHttpRequest();
@@ -10,9 +11,9 @@ button.onclick = function(){
         //if(requeststate===200)
        // {
             //var counter=request.responseText;
-            var counter = 0;
+            
             counter=counter+1;
-            var span=document.getElementById('counter');
+            var span=document.getElementById('count');
             span.innerHTML = counter.toString();
         //}
    // }
