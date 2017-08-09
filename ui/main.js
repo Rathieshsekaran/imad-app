@@ -10,13 +10,11 @@ request.onreadystatechange = function () {
         {
             var counter=request.responseText;
             
-            //counter=counter+1;
             var span=document.getElementById('count');
             span.innerHTML = counter.toString();
         }
     }
-};
-//make a request
-request.open('GET','http://rathiesh3.imad.hasura-app.io',true);
+};  
+request.open('GET','http://rathiesh3.imad.hasura-app.io/counter',true);
 request.send(null);
 };
