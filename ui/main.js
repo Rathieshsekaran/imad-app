@@ -12,7 +12,7 @@ button.onclick = function(){
             //var counter=request.responseText;
             var counter = 0;
             counter=counter+1;
-            var span=document.getElementById('count');
+            var span=document.getElementById('counter');
             span.innerHTML = counter.toString();
         //}
    // }
