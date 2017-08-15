@@ -20,7 +20,7 @@ request.send(null);
 };
 //submit name
 var nameInput=document.getElementById('name');
-var name=nameInput.value;
+var names=nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     var request = new XMLHttpRequest();
@@ -43,7 +43,6 @@ for(var i=0;i<names.length;i++){
 };  
 request.open('GET','http://rathiesh3.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
-};
   //make a request to the server and send the name
   //capture the list of names and render it
   
