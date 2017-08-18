@@ -114,7 +114,7 @@ app.get('/submit-name', function(req, res) {
 });
 
 
-app.get('/articles:articlename',function(req,res){
+app.get('/articles/:articlename',function(req,res){
 var articlename=req.params.articlename;
 pool.query("SELECT * FROM article WHERE title="+req.params.articleName+"'",function(err,result){
   if(err){
