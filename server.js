@@ -124,7 +124,7 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName+"'",func
           }
           else{
          var articleData=result.rows[0];
-             res.send(createTemplate(articleData));
+             res.send(createtemplate(articleData));
      }
   }
   });
