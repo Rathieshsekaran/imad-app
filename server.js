@@ -15,8 +15,8 @@ app.use(morgan('combined'));
 
 var articles= {
     'article-one' : { 
-        title: 'articleone|rathiesh',
-        heading:'articleone',
+        title: 'article-one',
+        heading:'Article one',
         date:'sept 15,1996',
         content: `<p>
                Study: Loss of Arctic sea ice impacting Atlantic Ocean water circulation system
